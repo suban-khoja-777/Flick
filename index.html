@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Work Tasks</title>
+        <link rel="stylesheet" href="main.css" type="text/css"/>
+    </head>
+
+    <body onload="initilizeApp()">
+        <header>
+            <input type="text" class="new-task-input" placeholder="Enter New Task" onkeyup="createNewTask(event)"/>
+        </header>
+
+        <div class="task-container">
+            <ul>
+                
+            </ul>
+        </div>
+
+        <template id="TASK_TEMP">
+            <li contenteditable="true" onblur="updateTaskContent(event)">
+                <span class="task-label"></span>
+                <span class="task-actions">
+                    <!--✔️❌🗑️-->
+                    <span class="btn btn-action toggl" onclick="togglTaskStatus(event)"></span>
+                    <span class="btn btn-action delete" onclick="deleteTask(event)">🗑️</span>
+                </span>
+            </li>
+        </template>
+
+        <script src="api.js"></script>
+        <script src="main.js"></script>
+    </body>
+</html>

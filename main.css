@@ -1,0 +1,85 @@
+*{
+    --priamry-color : #6400e4;
+    --secondary-color : #ffd500;
+}
+
+body {
+    margin:0;
+    font-family: consolas;
+    background:url('./bg-pattern.svg');
+    width: 97vw;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    width: 100%;
+    align-items: center;
+    max-height: 80vh;
+    overflow: auto;
+}
+
+li {
+    width: 56%;
+    display: flex;
+    justify-content: space-between;
+    margin: 3px 0;
+    font-weight: 600;
+}
+
+li:focus {
+    outline: none;
+}
+
+header {
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 1em;
+}
+
+.task-label{
+    display: inline-block;
+    width: 90%;
+    padding:5px;
+    border-radius: 3px;
+}
+
+.btn-action{
+    cursor:pointer;
+}
+
+.completed {
+    background: var(--priamry-color);
+    color: white;
+}
+
+.not-completed {
+    background: var(--secondary-color);
+    color: #212121;;
+}
+
+.new-task-input {
+    width: 50%;
+    border: 1px solid #e9e9e9;
+    border-radius: 3px;
+    padding: 0.5em;
+    background: #ebebeb;
+    color: #212121;
+    font-weight: 600;
+}
+
+.new-task-input:focus {
+    outline:none;
+    border : 2px solid #212121;
+
+}
+
+.task-container {
+    display: flex;
+    justify-content: center;
+}
